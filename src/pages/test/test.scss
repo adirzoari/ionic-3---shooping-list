@@ -1,0 +1,166 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+
+
+
+div.container{
+    width:400px;
+    height:900px;
+    margin:0 auto;
+    display: block;
+}
+
+div.app {
+    position: relative;
+    width:365px;
+    height: 680px;
+    background: #26485a;
+    margin-top:30px;;
+    box-shadow:inset -15px -15px 80px rgba(0,0,0,0.15);
+    
+    
+}
+
+div.header div.title {
+    color: rgba(255,255,255,0.8);
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    padding: 35px 0 0 40px;
+  
+}
+
+div.header div.desc {
+    color:rgba(255,255,255,0.8);
+    padding:12px 40px 0 40px;;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+
+div.header div.hosted-by{
+    position: absolute;
+    width:128px;
+    height:45px;
+    right: 55px;
+    text-align: right;
+    background:rgba(255,255,255,0.12);
+    border-radius: 7px;
+    padding:7px 10px;
+
+}
+
+div.header div.hosted-by img {
+    height: 35px;
+    border: 5px solid rgba(255,255,255,0.22);
+    border-radius:100%;
+}
+
+div.header div.hosted-by span.title {
+    position: absolute;
+    font-size: 14px;
+    font-weight:bold;
+    right: 68px;
+    color:#fff;
+    letter-spacing:0.5px;
+    height: 100%;
+    display:inline-block;
+    top:0;
+    margin-top:14px;
+}
+
+div.hosted-by span.title span.name {
+    font-size: 10px;
+    font-weight:300;
+    display:block; /* span is inline as default so we change to block */
+}
+
+div.body {
+    padding:52px 50px 0 40px;
+}
+div.body div.title {
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    font-size:12px;
+    font-weight:600;
+    letter-spacing: 0.5px;
+    transform: translateY(9px);
+
+}
+div.body ul.user-status {
+    margin-top: 15px;
+}
+
+div.body ul.user-status li {
+    list-style-type: none;
+    float: left;
+    color:rgba(255,255,255,0.7);
+    padding:15px 19px;
+    text-transform: uppercase;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing: 0.7px;
+    background: rgba(255,255,255,0.12);
+}
+div.body ul.user-status li.active {
+    background: #9fdd62;
+    color:#fff;
+}
+
+div.body ul.user-status li:first-child {
+    border-radius: 7px 0 0 7px;
+
+}
+
+div.event-info{
+    height: 145px;
+    margin-top:15px;
+}
+
+.clearfix::after{
+    content: "";
+    clear:both;
+    display:table;
+
+}
+
+div.event-info> span {
+    width: 47.4%;
+    height: 100%;background:rgba(255,255,255,0.12);
+    display:inline-block;
+    border-radius: 7px;
+    overflow:hidden;
+    
+}
+div.event-info span.going-status ul li img {
+    position: relative;
+    width: 42px;
+    border-radius:100%;
+    top:50%;
+    margin-top:-21px;
+}
+div.event-info > span:first-child{
+    float:left;
+}
+div.event-info  span.going-status {
+    position:relative;
+}
+div.event-info span.going-status ul{
+    padding:7px;
+}
+div.event-info span.going-status ul li {
+    position: relative;
+    float: left;
+    list-style-type: none;
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.2);
+    border-radius:100%;
+    margin-left:5px;
+    margin-top:2px;
+    text-align:center;
+    z-index: 2;
+}

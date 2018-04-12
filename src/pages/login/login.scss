@@ -1,0 +1,19 @@
+page-login {
+    .bg-image{
+        background-image: url('../assets/img/bg4.jpg');
+        background-repeat:no-repeat;
+        background-position: center;
+        background-size: 1000px;
+    }
+
+
+    // מבטל את הסקרול
+    .no-scroll .scroll-content {
+        overflow:hidden;
+    }
+
+    .error-message p{
+        color:red !important;
+    }
+
+}

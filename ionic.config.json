@@ -1,5 +1,8 @@
 {
   "name": "ShoopingListSocial",
-  "app_id": "",
-  "type": "ionic-angular"
+  "app_id": "05b77d1c",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }

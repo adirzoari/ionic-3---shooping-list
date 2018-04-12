@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons start>
+    </ion-buttons>
+    <ion-title>My Shopping List</ion-title>
+    <ion-buttons end>
+      <!-- editMode is temp variable - we not declare it in ts, we just use it here -->
+      <button ion-button icon-only (click)="editMode =!editMode">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+      <button ion-button icon-only style="color:#b7c4cb" (click)="onShowOptions($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <!-- we use async pipe because it's data from firebase so when it loaded then it display it -->
+<ion-list *ngFor="let list of shoppingLists | async" padding-top>
+  <ion-list-header>
+    <button ion-button item-left clear color="danger" icon-only (click)="removeList(list.$key)" *ngIf="editMode"><ion-icon name="remove-circle"></ion-icon></button>
+    {{ list.name }}
+    <button ion-button item-right clear icon-only (click)="shareList(list.$key,list.name)"><ion-icon name="share"></ion-icon></button>
+    <button ion-button item-right clear icon-only (click)="addItemToList(list.$key,list.name)"><ion-icon name="add"></ion-icon></button>
+     <button ion-button item-right clear icon-only (click)="updatelist(list.$key,list.name)">  <ion-icon name="information"></ion-icon></button>
+  </ion-list-header>
+<ion-card>
+
+  <ion-card-content>
+     <ion-item-sliding *ngFor="let shoppingItem of list.shoppingItems | async">
+    <ion-item>
+      {{ shoppingItem.name }}
+      
+    </ion-item>
+
+    <ion-item-options side="right">
+     <button ion-button color="danger" icon-only (click)="removeItem(shoppingItem.$key, list.$key)"><ion-icon name="trash"></ion-icon></button>
+     <button ion-button color="secondary" icon-only (click)="updateItem(shoppingItem.$key, list.$key)"><ion-icon name="information"></ion-icon></button>
+
+    </ion-item-options>
+  </ion-item-sliding>
+
+  </ion-card-content>
+</ion-card>
+ 
+</ion-list>
+<ion-fab right bottom padding>
+  <button ion-fab (click)="newList()">
+    <ion-icon name="add"></ion-icon>
+  </button>
+</ion-fab>
+</ion-content>

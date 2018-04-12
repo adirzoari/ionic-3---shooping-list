@@ -1,0 +1,95 @@
+
+<ion-header>
+
+  <ion-navbar color="danger">
+
+    <!-- start - left side  | end - right side -->
+    <ion-buttons start> 
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons> 
+
+    <ion-title>profile</ion-title>
+      <ion-buttons end> 
+      <button ion-button icon-only style="color: #ebebeb" (click)="showToast('bottom')">
+        <ion-icon name="heart-outline"></ion-icon>
+      </button>
+    </ion-buttons> 
+  </ion-navbar>
+
+
+
+
+</ion-header>
+
+
+<ion-content fullscreen>
+  <div class="header-parent">
+    <img src="assets/img/bg2.jpg">
+  
+  <div class="profile">
+    <img src="assets/img/profile_fb.jpg">
+  </div>
+<div class="title-name">
+  <h3>{{ name }}</h3>
+</div>
+  <div class="profile-location">
+    <ion-row align-items-center>
+      <ion-col col-8><div><i class="fa fa-map-marker location-icon" aria-hidden="true"> </i></div></ion-col>
+      <ion-col col-4> <div><p class="location" aria-hidden="true">{{ country }}</p></div></ion-col>      
+    </ion-row>
+  </div>
+
+</div>
+
+  <div class="counter">
+    <ion-row>
+      <ion-col>
+        <p class="numbers">{{myListCount}}</p>
+        <p class="numbers-title">Shopping Lists</p>
+      </ion-col>
+
+      <ion-col>
+        <p class="numbers">{{sharedCount}}</p>
+        <p class="numbers-title">Shared List</p>
+      </ion-col>
+
+      <ion-col>
+        <p class="numbers">{{ invitationCount }}</p>
+        <p class="numbers-title">Requests</p>
+      </ion-col>
+
+
+    </ion-row>
+  </div>
+
+<ion-slides autoplay="2500" loop="true" slidesPerView="4" class="slides">
+  <ion-slide >
+    <img class="slide-image" src="assets/img/profile-slide1.png">
+  </ion-slide>
+   <ion-slide >
+    <img class="slide-image" src="assets/img/profile-slide2.png">
+  </ion-slide>
+   <ion-slide >
+    <img class="slide-image" src="assets/img/profile-slide3.png">
+  </ion-slide>
+   <ion-slide >
+    <img class="slide-image" src="assets/img/profile-slide4.png">
+  </ion-slide>
+   <ion-slide >
+    <img class="slide-image" src="assets/img/profile-slide5.png">
+  </ion-slide>
+   <ion-slide >
+    <img class="slide-image" src="assets/img/profile-slide6.png">
+  </ion-slide>
+   <ion-slide >
+    <img class="slide-image" src="assets/img/profile-slide7.png">
+  </ion-slide>
+   <ion-slide >
+    <img class="slide-image" src="assets/img/profile-slide8.png">
+  </ion-slide>
+</ion-slides>
+
+
+</ion-content>

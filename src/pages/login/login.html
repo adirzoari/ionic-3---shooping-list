@@ -1,0 +1,39 @@
+
+
+<ion-content class="bg-image no-scroll" padding >
+
+<form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
+
+  <ion-item padding>
+    <ion-label floating>Email</ion-label>
+    <ion-input formControlName="email" type="text" [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>
+  </ion-item>
+  <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid && loginForm.controls.email.dirty" no-lines>
+    <p>Please enter a valid email</p>
+  </ion-item>
+
+
+  <ion-item padding>
+    <ion-label floating>Password</ion-label>
+    <!-- we create css class called: "invalid" : if the name is not valid (less 2 letters) and the user press(in smartphone) on this input field (name.dirty) then it shows error -->
+    <ion-input formControlName="password" type="password" [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>
+  </ion-item>
+  <!--  no-lines in the bottom of the ion-item -->
+ <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.dirty" no-lines>
+    <p>Your password needs at least 6 characters</p>
+  </ion-item> 
+
+  <button ion-button block type="submit" [disabled]="!loginForm.valid">Login</button>
+</form>
+<button ion-button block clear (click)="goToSignup()">Create a new account</button>
+<button ion-button block clear (click)="resetPassword()">Reset Password</button>
+
+
+<!--- connect with sms authenthication -->
+<!--
+<button ion-button block clear (click)="SMSAuth()">Sign in with Sms authenthication</button>
+<div id="recaptcha-container"></div>
+<button ion-button icon-left block clear (click)="loginWithFB()"><ion-icon name="logo-facebook"></ion-icon>LOGIN WITH FACEBOOK</button>
+  
+-->
+</ion-content>

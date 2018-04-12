@@ -1,1 +1,88 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+
+<ion-content padding>
+
+<ion-grid no-padding style="margin-top:4vh">
+            <ion-row align-items-end>
+                <ion-col col-auto>
+                <img style="width:50%" src="assets/img/menu-avatar.png">
+                </ion-col>
+
+                <ion-col col-auto style="margin-left:-8vw">
+                <h6>Joel Erickson</h6>
+                <p style="font-family:open-sans; font-size:12px; color:#758692; margin-top:-1.5vh">Indonesia</p>
+                </ion-col>
+            </ion-row>
+
+             <ion-row padding align-items-center *ngFor="let p of pages">
+                <ion-col col-auto>
+                <img style="width:50%" src="{{p.icon}}">
+                </ion-col>
+
+                <ion-col col-auto style="margin-left:4vw">
+                <p style="font-family:open-sans; font-size:16px; letter-spacing:0.5px; color:#1c252a; margin-top:1.5vh" (click)="navToPage(p.component)">{{p.title}}</p>
+                </ion-col>
+            </ion-row>
+
+            <!--
+            <ion-row padding align-items-center style="margin-top:4vh">
+                <ion-col col-auto>
+                <img style="width:50%" src="assets/img/pin.png">
+                </ion-col>
+
+                <ion-col col-auto style="margin-left:4vw">
+                <p style="font-family:open-sans; font-size:20px; letter-spacing:0.5px; color:#1c252a; margin-top:1.5vh">Home Page</p>
+                </ion-col>
+            </ion-row>
+
+            <ion-row padding align-items-center style="margin-top:-4vh">
+                <ion-col col-auto>
+                <img style="width:50%" src="assets/img/playlist.png">
+                </ion-col>
+
+                <ion-col col-auto style="margin-left:4vw">
+                <p style="font-family:open-sans; font-size:20px; letter-spacing:0.5px; color:#0091ea; margin-top:1.5vh" (click)="nextPage()">My Shooping List</p>
+                </ion-col>
+            </ion-row>
+
+            <ion-row padding align-items-center style="margin-top:-4vh">
+                <ion-col col-auto>
+                <img style="width:50%" src="assets/img/channels.png">
+                </ion-col>
+
+                <ion-col col-auto style="margin-left:4vw">
+                <p style="font-family:open-sans; font-size:20px; letter-spacing:0.5px; color:#1c252a; margin-top:1.5vh">Shared List </p>
+                </ion-col>
+            </ion-row>
+
+            <ion-row padding align-items-center style="margin-top:-4vh">
+                <ion-col col-auto>
+                <img style="width:50%" src="assets/img/library.png">
+                </ion-col>
+
+                <ion-col col-auto style="margin-left:4vw">
+                <p style="font-family:open-sans; font-size:20px; letter-spacing:0.5px; color:#1c252a; margin-top:1.5vh">My Profile</p>
+                </ion-col>
+            </ion-row>
+
+            <ion-row padding align-items-center style="margin-top:-4vh">
+                <ion-col col-auto>
+                <img style="width:50%" src="assets/img/logout.png">
+                </ion-col>
+
+                <ion-col col-auto style="margin-left:4vw">
+                <p style="font-family:open-sans; font-size:20px; letter-spacing:0.5px; color:#1c252a; margin-top:1.5vh">Sign-Out</p>
+                </ion-col>
+            </ion-row>
+            -->
+        </ion-grid>
+
+
+
+</ion-content>
+
+</ion-menu>
+
+
+<!--swipeBackEnabled="false"  -- cancel the option to swipe back -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

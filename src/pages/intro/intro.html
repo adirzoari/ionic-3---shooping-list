@@ -1,0 +1,46 @@
+<!--
+  Generated template for the IntroPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-slides pager>
+<!-- First slider -->
+  <ion-slide class="bg-slide1">
+    <i class="fa fa-shopping-basket" style="font-size:120px; color:#ebebeb" aria-hidden="true"></i>
+    <h1 style="color: #ebebeb"> Manage Your Shooping</h1>
+    <p style="font-family:open-sans; font-size:14px; color:#ebebeb"> Add shooping list <b>online</b> each time, <i>anywhere</i>!</p>
+  </ion-slide>
+
+<!-- Second slider -->
+  <ion-slide style="background-color:#f06261">
+    <i class="fa fa-shopping-cart" style="font-size:120px; color:#ebebeb" aria-hidden="true"></i>
+    <h1 style="color: #ebebeb"> Display It Anywhere</h1>
+    <p style="font-family:open-sans; font-size:14px; color:#ebebeb"> Add,Edit and  <b>Watch </b> your items <b>anytime</b>.</p>
+  </ion-slide>
+
+<!-- Third slider -->
+  <ion-slide style="background-color:#60c4bb">
+    <i class="fa fa-share-alt" style="font-size:120px; color:#ebebeb" aria-hidden="true"></i>
+    <h1 style="color: #ebebeb">Share With Your Friends</h1>
+    <p style="font-family:open-sans; font-size:14px; color:#ebebeb">Share it <b> online</b> anyone <b>to social </b> <i>Friends!</i>!</p>
+  </ion-slide>
+
+  <!-- login/signup slider -->
+  <ion-slide class="bg-image">
+
+    <h1 style="color:#000"> Welcome to our app </h1>
+    <h4 style="color:#000">Your Online Shooping.</h4>
+    <p class="padding" style="font-family:open-sans;font-size:14px; color:#000">
+      Now that you've seen what its all<br>
+      about, how about we get started?
+    </p>
+
+    <!-- text-align:center make the text inside the button in the center of the button -->
+    <div style="position:absolute; bottom:120px; text-align:center; z-index:1000; width:100%">
+      <button ion-button style="color:#000;" round outline [navPush]="nextPage"> Let's Go! </button>
+    </div>
+  </ion-slide>
+
+</ion-slides>

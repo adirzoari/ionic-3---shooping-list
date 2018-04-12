@@ -1,0 +1,56 @@
+page-intro {
+ 
+ .card {
+        border-radius:10px;
+        box-shadow: 0px 0px 50px 7px rgba(97, 110, 239, 0.8);
+    }
+    //משנה את הצבע של הכפתורים הלבנים בתוך הסליידר 
+    .swiper-pagination-bullet-active {  
+        background: white;
+    }
+    
+    
+    // מרחק מלמטה כלפי מעלה
+    .padding{
+        padding-bottom:200px;
+    }
+   
+    .bg-slide1{
+        background: #e43a15;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #e65245, #e43a15);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #e65245, #e43a15); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        
+    }
+
+    .bg-slide2{
+        background: #fc4a1a;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+    }
+    .bg-slide3{
+        background: #fc4a1a;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+    .bg-image{
+            background-image:url('../assets/img/bg3.jpg');
+            background-repeat: no-repeat;  // שלא יהיו חזרות ברקע- הרקע יהיה רק פעם אחת
+            background-position: center; // ממקם את התמונה שתתחיל באמצע
+            background-size:800px;  // גורם ללבן בצדדים 
+            	opacity: 1;
+
+
+        }
+    .button-outline-md .button-ios .button-outline {
+        border-color:#000 ;
+    }
+    .button-outline-ios{
+        border-color:#000;
+    }
+    .button-round.activated {
+        background-color:#F9B8BE;
+    }
+}
